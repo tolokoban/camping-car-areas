@@ -1,0 +1,83 @@
+<x-html app="main" title="Camping Car Area">
+    <x-book hash="book">
+        <init>
+            <div id="init-msg">
+                Chargement en cours...
+            </div>
+            <div id="init-btn" class="hide">
+                <a href="#/book/main" class="button">Démarrer</a>
+            </div>
+        </init>
+
+        <main>
+            <header>
+                <div id="gps" class="left">Acquisition GPS...</div>
+                <a href="" class="right" id="btnTrouver">&orarr;</a>
+            </header>
+            <section id="results"></section>
+        </main>
+
+        <detail>
+            <header>
+                <a href="#/book/main" class="left">&lt;</a>
+                <div id="detail-name" class="right"></div>
+            </header>
+            <section id="detail"></section>
+        </detail>
+
+        <photos>
+            <header>
+                <a href="#/book/detail" class="left">&lt;</a>
+                <div class="right">Photos &nbsp;</div>
+            </header>
+            <section id="photos"></section>
+        </photos>
+
+        <err-1>
+            <error>
+                <p>Votre navigateur est vraiment trop obsolète...</p>
+            </error>
+        </err-1>
+
+        <err-2>
+            <error>
+                <p>Votre appareil ne possède pas de carte SD !</p>
+            </error>
+        </err-2>
+
+        <err-3>
+            <error>
+                <p>Votre carte SD ne semble pas être accessible. Assurez-vous qu'elle est bien enfichée.</p>
+            </error>
+        </err-3>
+
+        <err-4>
+            <error>
+                <p>
+                    Vous utilisez actuellement votre téléphone comme clef USB. De ce fait, je ne peux pas accéder aux informations concernant les aires de stationnements qui sont stoquées sur la carte SD.
+                </p>
+                <p>
+                    Veuillez débrancher le câble USB pour régler le problème.
+                </p>
+            </error>
+        </err-4>
+
+        <err-5>
+            <error>
+                <p>Le fichier <code>/CampingCarAreas/index.json</code> n'a pas été trouvé sur votre carte SD !</p>
+            </error>
+        </err-5>
+
+        <err-6>
+            <error>
+                <p>Le fichier <code>/CampingCarAreas/index.json</code> est corrompu !</p>
+            </error>
+        </err-6>
+
+        <err-gps>
+            <error>
+                <p>Vous n'avez pas accordé à cette application l'autorisation d'utiliser le GPS !</p>
+            </error>
+        </err-gps>
+    </x-book>
+</x-html>

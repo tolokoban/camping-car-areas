@@ -1,0 +1,145 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+}
+
+
+body {
+    background: #333;
+    font-family: sans-serif;
+    font-size: 7vmin;
+    color: #eee;
+}
+
+
+header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    border-bottom: 1px solid #000;
+    background: linear-gradient(to bottom, #ff0, #f90 20%, #f70 50%, #e50 80%, #730);
+}
+
+header > * {
+    line-height: 3rem;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    position: absolute;
+    top: 0;
+    height: 3rem;
+}
+
+header > div {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+header > a {
+    width: 3rem;
+    display: inline-block;
+    text-align: center;
+    color: #9CD;
+    text-shadow: 1px 1px 1px #000;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: bold;
+    background: rgba(0,0,0,.5);
+}
+
+header > a.left {
+    left: 0;
+    border-right: 1px solid rgba(0,0,0,.5);
+}
+
+header > a.right {
+    right: 0;
+    border-left: 1px solid rgba(0,0,0,.5);
+}
+
+header > div.left {
+    left: 0;
+    right: 3rem;
+    text-align: left;
+    padding: 0;
+    padding-left: .5rem;
+}
+
+header > div.right {
+    left: 3rem;
+    right: 0;
+    text-align: right;
+    padding: 0;
+    padding-left: .5rem;
+}
+
+section {
+    position: absolute;
+    left: 0;
+    top: 3rem;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: auto;
+    padding: .5rem;
+}
+
+h1 {
+    border-bottom: 1px solid orange;
+    color: orange;
+    font-weight: 300;
+    font-variant: small-caps;
+    margin: 1rem 0 0 0;
+    font-size: 80%;
+}
+
+blockquote {
+    margin: .2rem;
+    padding: .2rem;
+    margin-left: 1rem;
+    background: #555;
+    box-shadow: -.5rem 0 orange;
+    font-size: 90%;
+}
+
+#init-btn {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    transition: transform .2s;
+    transform: translateY(0);
+}
+
+#init-btn.hide {
+    transition: transform .2s;
+    transform: translateY(100%);
+}
+
+
+a.button {
+    padding: 0 1rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    background: #9cd;
+    border-radius: 1.5rem;
+    text-decoration: none;
+    color: #000;
+}
+
+
+#init-msg {
+    padding: 1rem;
+}

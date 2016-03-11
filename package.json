@@ -1,0 +1,18 @@
+{
+    "repository": {"type": "git", "url": "h:/git.tolokoban"},
+    "homepage": "h:/git.tolok",
+    "bugs": {"url": "h:/git.tolok/issues"},
+    "scripts": {
+      "test": "jasmine",
+      "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
+    },
+    "name": "CampingCarAreas",
+    "version": "0.1.43",
+    "author": "Tolokoban",
+    "description": "Offline application finding the nearest camping-cars areas with comments and photos.",
+    "license": "GPL",
+    "tfw": {
+      "modules": [],
+      "compile": {"type": "firefoxos", "files": "\\.html$"}
+    }
+}

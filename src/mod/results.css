@@ -1,0 +1,50 @@
+div.result {
+    display: table;
+    margin: .5rem;
+    width: 95%;
+}
+
+div.result > div {
+    display: table-row;
+}
+
+div.result > div > div {
+    display: table-cell;
+    text-align: left;
+    padding-left: 1rem;
+    vertical-align: middle;
+    height: 4rem;
+}
+
+div.result > div > div.icon {
+    cursor: pointer;
+    width: 4rem;
+    content: "";
+    font-size: 0;
+    background-repeat:   no-repeat;
+    background-position: 50% 50%;
+    background-size:     contain;
+}
+
+div.result > div > div .name {
+    color: #fff;
+    font-weight: normal;
+    padding: 0;
+    text-shadow: 1px 1px #000;
+}
+
+div.result > div > div .km {
+    color: orange;
+    font-weight: bold;
+    padding-left: 1rem;
+}
+
+div.result > div > div .address {
+    color: #bbb;
+    font-size: 80%;
+}
+
+center {
+    font-size: 60%;
+    padding: .5em;
+}
