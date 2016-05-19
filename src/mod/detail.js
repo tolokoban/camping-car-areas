@@ -1,3 +1,4 @@
+var Converter = require("converter");
 var Photos = require("photos");
 var Widget = require("wdg");
 var T = Widget.tag;
@@ -13,8 +14,10 @@ exports.display = function(area) {
         Photos(area.photos);
     }
     div.append(
+        P( Converter.toHexagesimal( area.lat ) + " ; " + Converter.toHexagesimal( area.lng ) + "\n"
+           + area.lat + " ; " + area.lng ),
         H('Adresse'),
-        P(area.adresse + "\nlat: " + area.lat + ", lng: " + area.lng),
+        P(area.adresse),
         H('Informations'),
         P(area.infos),
         H('Tarif'),

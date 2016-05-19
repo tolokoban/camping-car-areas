@@ -1,18 +1,38 @@
 {
-    "repository": {"type": "git", "url": "h:/git.tolokoban"},
+    "repository": {
+        "type": "git",
+        "url": "h:/git.tolokoban"
+    },
     "homepage": "h:/git.tolok",
-    "bugs": {"url": "h:/git.tolok/issues"},
+    "bugs": {
+        "url": "h:/git.tolok/issues"
+    },
     "scripts": {
-      "test": "jasmine",
-      "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
+        "debug": "node node_modules/toloframework/bin/tfw.js build dev test php watch",
+        "clean": "node node_modules/toloframework/bin/tfw.js clean",
+        "release": "node node_modules/toloframework/bin/tfw.js build version php clean",
+        "test": "jasmine",
+        "test:dbg": "node --debug-brk node_modules/jasmine/bin/jasmine.js"
     },
     "name": "CampingCarAreas",
-    "version": "0.1.43",
+    "version": "0.2.1",
     "author": "Tolokoban",
     "description": "Offline application finding the nearest camping-cars areas with comments and photos.",
     "license": "GPL",
     "tfw": {
-      "modules": [],
-      "compile": {"type": "firefoxos", "files": "\\.html$"}
-    }
+        "modules": [],
+        "compile": {
+            "type": "firefoxos",
+            "files": "\\.html$"
+        }
+    },
+    "devDependencies": {
+        "jasmine-core": "^2.4.1",
+        "karma": "^0.13.19",
+        "karma-chrome-launcher": "^0.2.2",
+        "karma-firefox-launcher": "^0.1.7",
+        "karma-jasmine": "^0.3.6",
+        "toloframework": "^0.36.5"
+    },
+    "reservedModules": []
 }

@@ -1,0 +1,2 @@
+require("photos",function(t,o){var e=require("wdg"),a=require("data"),r=[];o.exports=function(t){function o(){if(0!=r.length){var t=r.pop(),n="photos/"+t+".jpg";a.loadPhotoDataURI(n).then(function(t){p.append(e.tag("img").attr("src",t)),o()})["catch"](function(a){p.append(e.tag("p").text("Impossible de trouver la photo "+t+".jpg !")),o()})}}r=t.slice();var p=e.create({id:"photos"});p.clear(),o()}});
+//# sourceMappingURL=photos.js.map

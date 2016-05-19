@@ -1,0 +1,2 @@
+require("tfw.storage",function(t,e){function n(t){return function(e,n){var o=t.getItem(e);if(null===o)return n;try{o=JSON.parse(o)}catch(r){}return o}}function o(t){return function(e,n){t.setItem(e,JSON.stringify(n))}}t.local={get:n(window.localStorage),set:o(window.localStorage)},t.session={get:n(window.sessionStorage),set:o(window.sessionStorage)}});
+//# sourceMappingURL=tfw.storage.js.map
