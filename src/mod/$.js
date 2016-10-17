@@ -2,16 +2,18 @@ exports.config={
     name:"CampingCarAreas",
     description:"Offline application finding the nearest camping-cars areas with comments and photos.",
     author:"Tolokoban",
-    version:"0.2.0",
+    version:"0.2.1",
     major:0,
     minor:2,
-    revision:0,
-    date:new Date(2016,4,19,17,28,0)
+    revision:1,
+    date:new Date(2016,9,17,10,40,44)
 };
 var currentLang = null;
 exports.lang = function(lang) {
     if (lang === undefined) {
-        lang = window.localStorage.getItem("Language");
+        if (window.localStorage) {
+            lang = window.localStorage.getItem("Language");
+        }
         if (!lang) {
             lang = window.navigator.language;
             if (!lang) {
@@ -24,7 +26,9 @@ exports.lang = function(lang) {
         lang = lang.substr(0, 2).toLowerCase();
     }
     currentLang = lang;
-    window.localStorage.setItem("Language", lang);
+    if (window.localStorage) {
+        window.localStorage.setItem("Language", lang);
+    }
     return lang;
 };
 exports.intl = function(words, params) {

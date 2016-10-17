@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><script>function C(){
+var i=document.getElementById('I'),o=document.getElementById('O'),v=parseFloat(i.value);
+o.textContent="Tapez ci-dessus";if(isNaN(v))return;
+var x,xM,xS,S=v<0?-1:1,M=Math,F=M.floor;
+v=M.abs(v);x=F(v);xM=F((v-x)*60);xS=F(.5+(v-x)*3600)%60;
+o.textContent = S*x+"°"+xM+"'"+xS+"''";};</script>
+<style>body,input{font-size:12vw;margin:0;padding:1rem;text-align:center;}</style></head>
+<body><input id="I" onkeyup="C()" size="10" autofocus style="background:#fc8"/><div id="O"/></body></html>

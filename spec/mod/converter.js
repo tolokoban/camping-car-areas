@@ -1,2 +1,2 @@
-require("converter",function(o,r){o.toHexagesimal=function(o){var r=Math.floor(o),t=Math.floor(60*(o-r)),e=Math.floor(3600*(o-r))%60;return r+"°"+t+"'"+e+"''"}});
+require("converter",function(r,o){function t(){return n(e,arguments)}var e={en:{},fr:{}},n=require("$").intl;r.toHexagesimal=function(r){var o,t,e;return r<0?(r=-r,o=Math.floor(r),t=Math.floor(60*(r-o)),e=Math.ceil(3600*(r-o))%60,-o+"°"+t+"'"+e+"''"):(o=Math.floor(r),t=Math.floor(60*(r-o)),e=Math.floor(3600*(r-o))%60,o+"°"+t+"'"+e+"''")},o.exports._=t});
 //# sourceMappingURL=converter.js.map
